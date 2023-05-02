@@ -32,15 +32,14 @@
         width: auto;
         height: auto;
 	  }
-      .flex-container > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 90px;
-        font-size: 45px;
-        text-align: center;
-        color: aliceblue;
-    } 
+      
+    .moving-text {
+      position: absolute;
+      font-size: 42px;
+      font-weight: bolder;
+      font-family:'Bree Serif' ;
+      color: white;
+    }
 </style>
 <body>
     <div id="video-container">
@@ -51,30 +50,92 @@
             <source src="C:\Users\teddy\Downloads\The Simple Formula for Success in 1 Minute Wind Sound.mp3" audio="audio/mpeg">
         </audio>
     </div>
-    <div class= "flex-container">
-        <div>I caught this morning morning's minion, king-</div>
-        <div>dom of daylight's dauphin, dapple-dawn-drawn Falcon, in his riding</div>
-        <div>Of the rolling level underneath him steady air, and striding</div>
-        <div>High there, how he rung upon the rein of a wimpling wing</div>
-        <div>In his ecstasy! then off, off forth on swing,</div>
-        <div>As a skate's heel sweeps smooth on a bow-bend: the hurl and gliding</div>
-        <div>Rebuffed the big wind. My heart in hiding</div>
-        <div>Stirred for a bird, – the achieve of, the mastery of the thing!</div>
-        <div>Brute beauty and valour and act, oh, air, pride, plume, here</div>
-        <div>Buckle! AND the fire that breaks from thee then, a billion</div>
-        <div>Times told lovelier, more dangerous,O my chevalior</div>
-        <div>No wonder of it: shéer plód makes plough down sillion</div>
-        <div>Shine, and blue-bleak embers, ah my dear,</div>
-        <div>Fall, gall themselves, and gash gold-vermilion.</div>
+    <div id= "text-container">
+        <div id="text-1" class="moving-text">SOUL</div>
+        <div id="text-2" class="moving-text">FIRE</div>
+        <div id="text-3" class="moving-text">NATURE</div>
+        <div id="text-4" class="moving-text">AIR</div>
+        <div id="text-5" class="moving-text">CONNECT</div>
+        <div id="text-6" class="moving-text">DREAM</div>
+        <div id="text-7" class="moving-text">WORLD</div>
+        <div id="text-8" class="moving-text">AFFINITY</div>
     </div>
 </body>
 <script>
-   function playMedia() {
+  function playMedia() {
   var video = document.getElementById("my-video");
   var audio = document.getElementById("my-audio");
   video.play();
   audio.play();
 }
-  </script>
+</script>
+<script>
+    // Get the text elements
+    var text1 = document.getElementById('text-1');
+    var text2 = document.getElementById('text-2');
+    var text3 = document.getElementById('text-3');
+    var text4 = document.getElementById('text-4');
+    var text5 = document.getElementById('text-5');
+    var text6 = document.getElementById('text-6');
+    var text7 = document.getElementById('text-7');
+    var text8 = document.getElementById('text-8');
+
+    // Move each text element randomly with its own timer
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text1.style.top = y + 'px';
+      text1.style.left = x + 'px';
+    }, 1000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text2.style.top = y + 'px';
+      text2.style.left = x + 'px';
+    }, 2000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text3.style.top = y + 'px';
+      text3.style.left = x + 'px';
+    }, 3000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text4.style.top = y + 'px';
+      text4.style.left = x + 'px';
+    }, 2000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text5.style.top = y + 'px';
+      text5.style.left = x + 'px';
+    },3000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text6.style.top = y + 'px';
+      text6.style.left = x + 'px';
+    }, 4000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text7.style.top = y + 'px';
+      text7.style.left = x + 'px';
+    }, 5000);
+
+    setInterval(function() {
+      var x = Math.floor(Math.random() * window.innerWidth);
+      var y = Math.floor(Math.random() * window.innerHeight);
+      text8.style.top = y + 'px';
+      text8.style.left = x + 'px';
+    }, 3000);
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </html>
